@@ -14,3 +14,4 @@ puts "#{edad} eso es mucho tiempo 💣"
 puts("¿dónde vives?")
 lugar_vivienda = gets
 puts "¿donde queda #{lugar_vivienda}?"
+
