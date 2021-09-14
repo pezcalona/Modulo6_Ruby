@@ -13,14 +13,39 @@
 
 #echopormí
 
-require_relative 'modulo_usuarios'      # enlazar los archivos modulo_usuarios.rb
-require_relative 'modulo_impresiones'   # enlazar al archivo modulo_impresiones.rb
+require_relative 'modulo_usuarios'
+require_relative 'modulo_impresiones'
+# enlazar al archivo modulo_impresiones.rb
 
-include ModuloUsuarios                  # incluye el módulo usuarios
-include ModuloImpresiones               # incluye el módulo impresiones
+                  # incluye el módulo usuarios
+include ModuloComics
+              # incluye el módulo impresiones
 
-arreglo_usuarios_correo_faker = generar_usuario_con_correo(5)   # módulo usuarios
+arreglo_heroes_faker = generar_heroes(5)   # módulo usuarios
 
-imprimir_usuarios_con_correos(arreglo_usuarios_correo_faker)    # módulo impresiones
+generar_heroes( arreglo_heroes_faker)    # módulo impresiones
 
+# arreglo_usuarios_correo_faker = generar_usuario_con_correo(5)   # módulo usuarios
+
+# imprimir_usuarios_con_correos(arreglo_usuarios_correo_faker)    # módulo impresiones
+
+# if opcion == 1
+
+#     cantidad_a_iterar    
+#     generar_lista(n)    
+#     elsif    
+#     opcion ==2    
+#     cantidad_a_iterar    
+#     generar_lista_2(n)    
+#     elsif opcion == 3    
+#     puts "Gracias por Preferirnos"    
+#     end    
+#     end    
+#     end
+    
+#     def cantidad_a_iterar    
+#     puts "Ingrese la Cantidad de usuarios a desplegar"    
+#     n = gets.to_i    
+#     end    
+#     end
 

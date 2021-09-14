@@ -1,21 +1,38 @@
 require 'faker'
 
-module ModuloUsuarios
+module ModuloComics
 
-    def generar_usuarios_con_gustos(n)
-        usuarios = []
+    def generar_heroes(n)
+        heroes = []
         for i in 1..n
-            usuarios << { nombre: Faker::Name.name, juego: Faker::Game.title, pelicula: Faker::Movie.title }
+            heroes << { pelicula: Faker::DcComics.title, heroe: Faker::DcComics.hero, nombre: Faker::DcComics.name }
         end
-        return usuarios
+        return heroes
     end
 
+    def generar_heroine(n)
+        heroine = []
+        for i in 1..n
+            heroine << { pelicula: Faker::DcComics.title, heroine: Faker::DcComics.heroine, nombre: Faker::DcComics.name }
+        end
+        return heroine
+    end
+
+    def generar_villanos(n)
+        villanos = []
+        for i in 1..n
+        villanos << { pelicula: Faker::DcComics.title, villanos: Faker::DcComics.villanos, nombre: Faker::Movie.name }
+        end
+        return villanos
+    end
 end
 
-def generar_usuarios_con_correo(n)
-    usuarios = []
-    for i in 1..n
-        usuarios << {nombre: Faker::Name.name, email: faker::Internet}
-    end
-    return usuarios
-end
+# Faker::DcComics.hero #=> "Batman"
+
+# Faker::DcComics. #=> "Supergirl"
+
+# Faker::DcComics.villain #=> "The Joker"
+
+# Faker::DcComics.name #=> "Clark Kent"
+
+# Faker::DcComics.title #=> "Teen Titans: The Judas Contract
